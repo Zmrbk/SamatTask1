@@ -29,3 +29,13 @@ const obj = {
     },
   },
 };
+
+const objFunc = (obj) => {
+  let objCopy = { ...obj };
+  // ? если objCopy существует
+  while (objCopy?.next !== undefined) {
+    console.log(objCopy.value);
+    objCopy = objCopy.next;
+  }
+};
+objFunc(obj);
